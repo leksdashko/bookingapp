@@ -1,0 +1,28 @@
+{
+  "name": "bookingapp",
+  "version": "1.0.0",
+  "description": "Hotels booking app",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leksdashko/bookingapp.git"
+  },
+  "keywords": [
+    "booking"
+  ],
+  "author": "Oleks Dash",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/leksdashko/bookingapp/issues"
+  },
+  "homepage": "https://github.com/leksdashko/bookingapp#readme",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mongoose": "^7.0.3",
+    "nodemon": "^2.0.22"
+  }
+}
