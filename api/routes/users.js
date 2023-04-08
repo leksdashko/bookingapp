@@ -1,6 +1,6 @@
 const express = require('express');
 const { updateUser, deleteUser, getUser, getUsers } = require('../controllers/user');
-const { verifyUser, verifyAdmin } = require('../../utils/verifyToken');
+const { verifyUser, verifyAdmin } = require('../utils/verifyToken');
 
 
 const router = express.Router();

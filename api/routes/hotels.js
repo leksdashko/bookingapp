@@ -1,6 +1,6 @@
 const express = require('express');
 const { createHotel, updateHotel, deleteHotel, getHotel, getHotels } = require('../controllers/hotel');
-const { verifyAdmin } = require('../../utils/verifyToken');
+const { verifyAdmin } = require('../utils/verifyToken');
 
 
 const router = express.Router();
