@@ -64,6 +64,8 @@ const countByCity = async (req, res, next) => {
 const countByType = async (req, res, next) => {
 	const cities = req.query.cities.split(",");
 
+	console.log(cities);
+
 	try {
 		const list = await Promise.all(cities.map(city => {
 			return Hotel.countDocuments({city:city});

@@ -1,5 +1,6 @@
 const express = require('express');
 const dotenv = require('dotenv');
+const cors = require('cors');
 const mongoose = require('mongoose');
 const authRouter = require('./routes/auth');
 const usersRouter = require('./routes/users');
@@ -24,6 +25,7 @@ mongoose.connection.on("disconnected", () => {
 });
 
 //middlewares
+app.use(cors());
 app.use(cookieParser());
 app.use(express.json());
 
