@@ -11,10 +11,18 @@ import {
   faLocationDot,
 } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
+import { useLocation } from "react-router-dom";
+import useFetch from "../../hooks/useFetch";
+import { useContext } from "react";
+import { SearchContext } from "../../context/SearchContext";
 
 const Hotel = () => {
+	const location = useLocation();
+	const id = location.pathname.split("/")[2];
   const [slideNumber, setSlideNumber] = useState(0);
   const [open, setOpen] = useState(false);
+
+	const {data, loading, error} = useFetch(`/hotels/${id}`);
 
   const photos = [
     {
@@ -36,6 +44,10 @@ const Hotel = () => {
       src: "https://cf.bstatic.com/xdata/images/hotel/max1280x900/261707389.jpg?k=52156673f9eb6d5d99d3eed9386491a0465ce6f3b995f005ac71abc192dd5827&o=&hp=1",
     },
   ];
+
+	const {dates} = useContext(SearchContext);
+
+	console.log(dates);
 
   const handleOpen = (i) => {
     setSlideNumber(i);
